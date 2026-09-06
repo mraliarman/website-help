@@ -1,0 +1,8 @@
+{
+  "name":"website-help",
+  "version":"2.0.0",
+  "private":true,
+  "type":"module",
+  "scripts":{"check":"node --check term.js && node --check assets/app.js","serve":"python -m http.server 8080"},
+  "engines":{"node":">=20"}
+}

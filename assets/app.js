@@ -1,0 +1,24 @@
+const state={query:"",category:"all",page:0,pageSize:48,filtered:[]};
+const $=selector=>document.querySelector(selector);
+const container=$("#termsContainer");
+const filters=$("#filters");
+const search=$("#searchInput");
+const stats=$("#stats");
+const status=$("#status");
+const loadMore=$("#loadMore");
+const empty=$("#emptyState");
+const categoryGrid=$("#categoryGrid");
+const categoryEntries=Object.entries(categoryMeta);
+const escapeHTML=value=>String(value).replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[char]));
+const debounce=(fn,wait)=>{let timer;return(...args)=>{clearTimeout(timer);timer=setTimeout(()=>fn(...args),wait)}};
+function normalize(value){return String(value||"").toLocaleLowerCase("fa-IR").trim()}
+function buildCategoryGrid(){categoryEntries.forEach(([key,meta],index)=>{const link=document.createElement("a");link.href="#standards";link.className="card";const count=termsArray.filter(item=>item.category===key).length;link.innerHTML=`<div class="card-top"><span class="card-number">${String(index+1).padStart(2,"0")}</span><span class="card-icon">${escapeHTML(meta.icon)}</span></div><h3>${escapeHTML(meta.label)}</h3><p>${count.toLocaleString("fa-IR")} استاندارد تخصصی در این حوزه</p><div class="card-footer"><span class="card-category">CATEGORY</span><span class="card-link">مشاهده ↗</span></div>`;link.addEventListener("click",()=>{state.category=key;filters.querySelectorAll(".filter").forEach(item=>item.classList.toggle("active",item.dataset.category===key));applyFilter()});categoryGrid.appendChild(link)})}
+function buildFilters(){const all=document.createElement("button");all.type="button";all.className="filter active";all.dataset.category="all";all.textContent="همه";filters.appendChild(all);categoryEntries.forEach(([key,meta])=>{const button=document.createElement("button");button.type="button";button.className="filter";button.dataset.category=key;button.textContent=meta.label;filters.appendChild(button)})}
+function applyFilter(){const q=normalize(state.query);state.filtered=termsArray.filter(item=>{const categoryMatch=state.category==="all"||item.category===state.category;if(!categoryMatch)return false;if(!q)return true;return normalize(item.title).includes(q)||normalize(item.desc).includes(q)||normalize(item.category).includes(q)});state.page=0;container.innerHTML="";render()}
+function render(){const end=Math.min((state.page+1)*state.pageSize,state.filtered.length);const slice=state.filtered.slice(state.page*state.pageSize,end);const fragment=document.createDocumentFragment();slice.forEach((item,index)=>{const card=document.createElement("article");card.className="card";const absolute=state.page*state.pageSize+index+1;const meta=categoryMeta[item.category]||{label:item.category,icon:"•"};card.innerHTML=`<div class="card-top"><span class="card-number">${String(absolute).padStart(4,"0")}</span><span class="card-icon" aria-hidden="true">${escapeHTML(meta.icon)}</span></div><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.desc)}</p><div class="card-footer"><span class="card-category">${escapeHTML(meta.label)}</span><a class="card-link" href="${escapeHTML(item.link)}" target="_blank" rel="noopener noreferrer">مرجع ↗</a></div>`;fragment.appendChild(card)});container.appendChild(fragment);const shown=Math.min(end,state.filtered.length);stats.innerHTML=`<span><strong>${shown.toLocaleString("fa-IR")}</strong> مورد از <strong>${state.filtered.length.toLocaleString("fa-IR")}</strong> نتیجه</span><span>مجموع مرجع: <strong>${termsArray.length.toLocaleString("fa-IR")}</strong></span>`;status.textContent=state.query?`جستجو: ${state.query}`:"";empty.classList.toggle("show",state.filtered.length===0);loadMore.parentElement.style.display=shown<state.filtered.length?"flex":"none"}
+filters.addEventListener("click",event=>{const button=event.target.closest(".filter");if(!button)return;state.category=button.dataset.category;filters.querySelectorAll(".filter").forEach(item=>item.classList.toggle("active",item===button));applyFilter()});
+search.addEventListener("input",debounce(event=>{state.query=event.target.value;applyFilter()},120));
+$("#clearBtn").addEventListener("click",()=>{search.value="";state.query="";state.category="all";filters.querySelectorAll(".filter").forEach(item=>item.classList.toggle("active",item.dataset.category==="all"));applyFilter();search.focus()});
+loadMore.addEventListener("click",()=>{state.page++;render()});
+window.addEventListener("pointermove",event=>{if(matchMedia("(pointer:coarse)").matches)return;document.documentElement.style.setProperty("--mx",`${event.clientX}px`);document.documentElement.style.setProperty("--my",`${event.clientY}px`)},{passive:true});
+buildCategoryGrid();buildFilters();applyFilter();
