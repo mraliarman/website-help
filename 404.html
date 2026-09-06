@@ -1,1 +1,37 @@
-<!doctype html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>صفحه پیدا نشد | Website Help</title><link rel="stylesheet" href="/assets/main.css"></head><body><main class="hero"><div class="site-shell hero-inner"><span class="eyebrow">404 / NOT FOUND</span><h1>این صفحه <em>وجود ندارد.</em></h1><p>آدرس واردشده پیدا نشد. برای برگشت به مرجع استانداردهای توسعه وب از دکمه زیر استفاده کنید.</p><div class="hero-actions"><a class="button primary" href="/">بازگشت به خانه</a></div></div></main></body></html>
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#090909">
+<title>صفحه پیدا نشد | Website Help</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/main.css">
+<style>
+.error-page{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.error-page:before{content:"404";position:absolute;inset:auto 50% 50%;transform:translate(50%,50%);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:min(42vw,620px);font-weight:700;line-height:1;color:rgba(216,181,109,.035);letter-spacing:-.08em;pointer-events:none}.error-card{position:relative;z-index:1;width:min(760px,100%);padding:clamp(32px,7vw,80px);border:1px solid var(--graphite);background:rgba(16,16,16,.82);backdrop-filter:blur(18px);box-shadow:0 30px 100px rgba(0,0,0,.35)}.error-code{display:flex;align-items:center;gap:12px;color:var(--gold);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.12em}.error-code:before{content:"";width:32px;height:1px;background:var(--gold)}.error-card h1{margin:24px 0 16px;font-size:clamp(42px,7vw,76px);line-height:1.1;font-weight:400;letter-spacing:-.05em}.error-card h1 span{color:var(--gold)}.error-card p{max-width:600px;margin:0;color:var(--smoke);font-size:15px;line-height:2.1}.error-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}.error-meta{display:flex;flex-wrap:wrap;gap:20px;margin-top:44px;padding-top:18px;border-top:1px solid var(--graphite);color:#666;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10px}.error-meta strong{color:#999;font-weight:400}.button.secondary{background:#151515}.button.secondary:hover{background:#1c1c1c}@media(max-width:680px){.error-card{padding:30px 22px}.error-card h1{font-size:44px}.error-meta{display:block}.error-meta span{display:block;margin-top:8px}.error-meta span:first-child{margin-top:0}}
+</style>
+</head>
+<body>
+<main class="error-page">
+<div class="site-shell">
+<section class="error-card" aria-labelledby="error-title">
+<div class="error-code">ERROR 404 · NOT FOUND</div>
+<h1 id="error-title">این صفحه <span>پیدا نشد.</span></h1>
+<p>آدرسی که درخواست کرده‌اید وجود ندارد، جابه‌جا شده یا ممکن است حذف شده باشد. از مسیرهای زیر برای ادامه استفاده کنید.</p>
+<div class="error-actions">
+<a class="button primary" href="/">بازگشت به صفحه اصلی</a>
+<a class="button secondary" href="/knowledge.html">ورود به پایگاه دانش</a>
+</div>
+<div class="error-meta">
+<span>STATUS <strong>404</strong></span>
+<span>REQUEST <strong id="requestedPath">/</strong></span>
+<span>WEBSITE HELP <strong>KNOWLEDGE BASE</strong></span>
+</div>
+</section>
+</div>
+</main>
+<script>document.getElementById('requestedPath').textContent=window.location.pathname+window.location.search;</script>
+</body>
+</html>
