@@ -1,154 +1,122 @@
-# راهنمای توسعه و استانداردهای وب
+# Website Help — مرجع فارسی توسعه وب و وردپرس
 
-مرجع فارسی و کاربردی برای توسعه‌دهندگان، طراحان و مدیران وب‌سایت که می‌خواهند اصطلاحات، استانداردها و الگوهای صحیح توسعه را در یک نقطه در اختیار داشته باشند.
+مرجع فارسی و قابل جستجو برای یادگیری، پیاده‌سازی و عیب‌یابی توسعه وب. نسخه فعلی دارای **۳۰٬۰۰۰ مدخل دانش** در **۳۰ حوزه تخصصی** است و دانش WordPress Developer Resources و W3Schools را در کنار منابع رسمی تکمیلی در یک ساختار یکپارچه ارائه می‌کند.
 
-[![Language](https://img.shields.io/badge/language-Persian-7b61ff)](https://github.com/mraliarman/website-help)
-[![License](https://img.shields.io/badge/license-MIT-00d5ff)](LICENSE)
+## دامنه دانش
 
-## معرفی
+- مفاهیم پایه وب، مرورگر، کلاینت، سرور و CMS
+- هاست، Web Hosting، VPS، cPanel، DirectAdmin، Apache، Nginx و LiteSpeed
+- دامنه، DNS، Nameserver، رکوردها، TLD و Registry/Registrar
+- NIC، ایرنیک، شناسه NIC، ثبت و تمدید دامنه‌های `.ir`
+- WordPress Core، APIها، WP-CLI، Cron، Options، Metadata، Transients و Multisite
+- استاندارد توسعه قالب کلاسیک و Block Theme
+- استاندارد توسعه افزونه و چرخه Activation/Deactivation/Uninstall
+- Actions، Filters، Hooks و API Reference وردپرس
+- Template Hierarchy، Template Parts، Theme Tags و `theme.json`
+- Gutenberg، Block Editor، Block API، Patterns و Interactivity API
+- WooCommerce، محصول، سفارش، سبد خرید، پرداخت، حمل‌ونقل و Store API
+- HTML و HTML Reference
+- CSS، Selectors، Flexbox، Grid، Responsive و CSS Functions
+- JavaScript، DOM، Events، Fetch، Modules، Async و Browser APIs
+- Web APIs، Storage، History، Service Worker، Cache و WebSocket
+- HTTP، HTTPS، Headers، Cookies، Methods و Status Codes
+- Database، MySQL/MariaDB/SQLite، SQL، Index، Transaction و Migration
+- PHP، Composer، Namespace، OOP، PSR و Dependency Management
+- SEO، Crawl، Indexing، Canonical، Sitemap، Structured Data و Search Console
+- Performance، Core Web Vitals، LCP، INP، CLS، TTFB، CDN و Caching
+- Security، XSS، CSRF، SQL Injection، CSP، HSTS، Nonce، Sanitization و Escaping
+- Accessibility و WCAG، Semantic HTML، ARIA، Keyboard Navigation و Screen Reader
+- UI/UX، Information Architecture، Design System و Usability
+- Forms، Validation، CSRF، Input Types و Error States
+- Images، Video، Audio، SVG، WebP، AVIF، Responsive Images و Lazy Loading
+- DevOps، CI/CD، GitHub Actions، Deployment، Rollback، Docker و Monitoring
+- Git، Branch، Commit، Merge، Rebase، Pull Request و Code Review
+- Testing، Unit، Integration، E2E، Regression، Load، Security و Accessibility Testing
+- Privacy، Personal Data، Consent، Retention، Anonymization و Privacy by Design
+- Architecture، SOLID، Separation of Concerns، Design Patterns و Technical Debt
 
-این repository یک وب‌سایت استاتیک، سبک و RTL است که به‌عنوان یک مرجع سریع برای مفاهیم توسعه وب طراحی شده است. نسخه فعلی علاوه بر واژه‌نامه عمومی، حوزه‌های تخصصی زیر را پوشش می‌دهد:
+## مدل ۳۰٬۰۰۰ مدخل
 
-- اصول و چک‌لیست‌های SEO
-- Core Web Vitals و بهینه‌سازی سرعت
-- HTML، CSS، JavaScript و اصول Front-end
-- UI/UX، دسترس‌پذیری و Responsive Design
-- اصول توسعه قالب کلاسیک و Block Theme وردپرس
-- اصول توسعه افزونه وردپرس
-- Hooks، Actions و Filters
-- Template Hierarchy، Template Tags و Template Parts
-- REST API، WP-CLI، Cron، Transients و Metadata
-- امنیت وردپرس و توسعه امن
-- WooCommerce و مفاهیم فروشگاه اینترنتی
-- Tailwind CSS و مفاهیم مدرن CSS
-- DNS، HTTPS، CDN، Cache، Hosting و زیرساخت وب
+دانشنامه از **۷۵۰ مفهوم پایه تخصصی** و **۴۰ بُعد آموزشی/مهندسی** ساخته می‌شود؛ حاصل دقیقاً **۳۰٬۰۰۰ مدخل قابل جستجو** است. برای هر مفهوم، ابعادی مانند تعریف، کاربرد، پیاده‌سازی، مثال، امنیت، Performance، SEO، Accessibility، تست، عیب‌یابی، نسخه‌بندی، مهاجرت، استقرار، معماری، Code Review و مرجع رسمی در دسترس است.
 
-## هدف پروژه
+این ساختار باعث می‌شود یک اصطلاح فقط به‌صورت یک تعریف کوتاه ثبت نشود و بتوان آن را از چند زاویه مهندسی بررسی کرد.
 
-هدف پروژه ایجاد یک مرجع قابل جستجو و قابل توسعه است؛ به‌گونه‌ای که توسعه‌دهنده بتواند هنگام طراحی سایت، توسعه قالب یا افزونه، رفع خطا، بررسی SEO یا بهینه‌سازی عملکرد، سریعاً به تعریف و مرجع رسمی هر مفهوم برسد.
+## منابع اصلی
 
-محتوای فنی وردپرس تا حد امکان به مستندات رسمی WordPress Developer Resources متصل شده و برای SEO و Performance نیز از منابع رسمی Google Search Central، web.dev و MDN استفاده می‌شود.
+### WordPress
 
-## ساختار repository
+- WordPress Developer Resources
+- WordPress Code Reference
+- Theme Handbook
+- Plugin Handbook
+- Hooks API و Action/Filter Reference
+- Template Hierarchy
+- Block Editor Handbook
+- REST API
+- Coding Standards
+- WooCommerce Documentation
+
+### W3Schools
+
+- HTML Tutorial و HTML Reference
+- CSS Tutorial و CSS Reference
+- JavaScript Tutorial و JavaScript Reference
+- HTML Forms، Media، DOM و Browser APIs
+
+### منابع تکمیلی رسمی
+
+- Google Search Central برای SEO
+- web.dev برای Performance و Core Web Vitals
+- MDN Web Docs برای Web Platform
+- W3C برای Accessibility و Privacy
+- PHP Documentation
+- Git Documentation
+- GitHub Actions Documentation
+- ICANN برای مفاهیم Domain و DNS
+- NIC برای دامنه‌های `.ir`
+
+## معماری پروژه
 
 ```text
 website-help/
 ├── index.html
 ├── term.js
-├── og-logo.png
-├── README.md
+├── assets/
+│   ├── app.js
+│   └── main.css
+├── 404.html
+├── manifest.webmanifest
+├── robots.txt
+├── sitemap.xml
+├── .github/workflows/validate.yml
+├── LICENSE
 ├── SECURITY.md
-└── LICENSE
+└── README.md
 ```
-
-### `index.html`
-
-صفحه اصلی و رابط کاربری پروژه است. صفحه با HTML، CSS و JavaScript ساده ساخته شده و برای اجرای آن نیازی به framework، bundler یا build step ندارد.
 
 ### `term.js`
 
-منبع داده اصطلاحات و استانداردها و منطق جستجو و نمایش کارت‌ها است. داده‌ها دارای عنوان، توضیح، دسته‌بندی، لینک مرجع و آیکون هستند.
+منبع داده دانشنامه است. داده‌ها به‌صورت برنامه‌ای ساخته می‌شوند تا حجم repository کنترل شود، اما تعداد خروجی با assertion دقیق روی **۳۰٬۰۰۰** کنترل می‌شود. هر مدخل دارای عنوان، توضیح فارسی، دسته‌بندی، آیکون، منبع و لینک مرجع است.
 
-### `og-logo.png`
+### `assets/app.js`
 
-تصویر Open Graph، favicon و تصویر اشتراک‌گذاری پروژه است.
+لایه ارائه و تعاملات شامل جستجو، فیلتر، شمارنده نتایج، رندر تدریجی و Empty State است.
 
-## دسته‌بندی محتوای مرجع
+## عملکرد
 
-### ۱. SEO
+- JavaScript با `defer` اجرا می‌شود.
+- داده‌ها یک‌بار در حافظه ساخته و برای جستجو استفاده می‌شوند.
+- رندر نتایج به‌صورت صفحه‌ای انجام می‌شود تا DOM همزمان با ۳۰٬۰۰۰ کارت پر نشود.
+- جستجو debounce دارد.
+- منابع خارجی غیرضروری render-blocking نیستند.
+- حالت `prefers-reduced-motion` رعایت می‌شود.
+- صفحه بدون framework و bundler سنگین اجرا می‌شود.
 
-این بخش اصول مهمی مانند Search Intent، Title، Meta Description، Canonical، Robots، Sitemap، Internal Linking، Structured Data، Schema، Open Graph، Crawlability، Indexability، Mobile SEO، Image SEO، Technical SEO، Core Web Vitals و Search Console را پوشش می‌دهد.
+## کیفیت محتوا
 
-مرجع اصلی: Google Search Central.
+هر مدخل باید عنوان روشن، توضیح فارسی، دسته‌بندی صحیح و مرجع معتبر داشته باشد. برای APIها و استانداردهای WordPress اولویت با مستندات رسمی WordPress است. برای HTML/CSS/JavaScript اولویت با W3Schools و منابع استاندارد پلتفرم است. برای SEO، Performance، Accessibility و Security نیز باید از منابع رسمی و به‌روز استفاده شود.
 
-### ۲. Performance
-
-استانداردهای Performance شامل TTFB، LCP، INP، CLS، Critical Rendering Path، Render Blocking، Cache-Control، Compression، Brotli، Gzip، CDN، Image Optimization، WebP، AVIF، Lazy Loading، Preload، Preconnect، DNS Prefetch، Code Splitting، Minification و کاهش JavaScript غیرضروری است.
-
-هدف پروژه این است که توصیه‌ها فقط به «سریع‌تر کردن سایت» محدود نشوند و تفاوت بین اندازه فایل، زمان شبکه، زمان سرور، زمان parse/compile و زمان render نیز مشخص باشد.
-
-### ۳. توسعه قالب وردپرس
-
-مباحث کلاسیک و Block Theme در نظر گرفته شده‌اند؛ از `style.css`، `functions.php`، Template Hierarchy، Template Tags و `theme.json` تا Templates، Template Parts، Patterns، Block Styles، Global Styles، Enqueue کردن assetها، Localization و Accessibility.
-
-### ۴. توسعه افزونه وردپرس
-
-مفاهیم Plugin Architecture، Plugin Header، Activation/Deactivation/Uninstall، Settings API، Options API، Metadata API، Shortcodes، Custom Post Types، Taxonomies، REST API، AJAX، Nonces، Capabilities، Sanitization، Validation، Escaping، Cron، Transients، HTTP API و Internationalization پوشش داده شده‌اند.
-
-### ۵. Hooks، Actions و Filters
-
-هوک‌ها به دو گروه Action و Filter تقسیم می‌شوند. Action برای اجرای رفتار در یک نقطه مشخص و Filter برای تغییر داده در مسیر پردازش استفاده می‌شود. مرجع رسمی WordPress فهرست Action و Filter را جداگانه ارائه می‌کند.
-
-این پروژه مجموعه‌ای از مهم‌ترین هوک‌های عمومی، Front-end، Admin، Query، Template، Authentication، Media، REST، Cron و Content را به‌عنوان مرجع سریع ارائه می‌کند و در هر مورد به مستندات رسمی متصل می‌شود.
-
-### ۶. Templateها و Template Hierarchy
-
-ساختار قالب‌های کلاسیک و Block Theme از جمله `front-page`، `home`، `single`، `page`، `archive`، `category`، `tag`، `taxonomy`، `author`، `date`، `search`، `404`، `attachment` و `embed` پوشش داده شده است.
-
-در Block Theme نیز `/templates` و `/parts` و فایل‌های `.html` مورد توجه قرار گرفته‌اند.
-
-## استانداردهای محتوا
-
-هر استاندارد جدید باید:
-
-1. عنوان دقیق و قابل جستجو داشته باشد.
-2. توضیح فارسی کوتاه و کاربردی داشته باشد.
-3. دسته‌بندی مشخص داشته باشد.
-4. لینک مرجع معتبر داشته باشد.
-5. تا حد امکان به منبع رسمی یا مستندات اولیه متصل باشد.
-6. از ادعاهای قدیمی یا منسوخ جلوگیری کند.
-7. برای توسعه‌دهنده قابل استفاده عملی باشد.
-8. در صورت تغییر استاندارد، لینک و توضیح آن بازبینی شود.
-
-## استانداردهای توسعه کد
-
-کد پروژه باید ساده، قابل نگهداری و بدون وابستگی غیرضروری باشد. JavaScript باید در حد امکان با APIهای استاندارد مرورگر نوشته شود. دستکاری DOM باید حداقل باشد و event listenerهای سنگین نباید در مسیر تعامل اصلی صفحه قرار بگیرند.
-
-برای منابع JavaScript خارجی از `defer` یا الگوی بارگذاری مناسب استفاده می‌شود. منابع خارجی غیرضروری نباید باعث render-blocking شدن صفحه شوند.
-
-## اصول Performance خود پروژه
-
-- JavaScript با `defer` بارگذاری می‌شود.
-- رندر کارت‌ها به‌صورت تدریجی انجام می‌شود.
-- جستجو با debounce اجرا می‌شود.
-- افکت‌های سنگین در دستگاه‌های ضعیف و حالت reduced-motion محدود می‌شوند.
-- eventهای pointer تا حد امکان با `requestAnimationFrame` کنترل می‌شوند.
-- منابع فونت خارجی نباید بی‌دلیل مسیر رندر اولیه را مسدود کنند.
-- لینک‌های خارجی با `noopener noreferrer` باز می‌شوند.
-- تصاویر دارای ابعاد مشخص هستند تا از Layout Shift جلوگیری شود.
-- داده‌های تکراری حذف و ساختار داده‌ها ساده نگه داشته می‌شود.
-
-## UI/UX
-
-سبک بصری پروژه عمداً حفظ شده است: پس‌زمینه تیره، glassmorphism، گرادیان‌های بنفش/آبی، کارت‌های نرم و RTL. در کنار حفظ هویت بصری، موارد زیر بهبود یافته‌اند:
-
-- سلسله‌مراتب بصری واضح‌تر
-- خوانایی بهتر متن فارسی
-- وضعیت جستجوی واضح‌تر
-- تعامل بهتر کارت‌ها
-- کنترل انیمیشن با `prefers-reduced-motion`
-- رفتار بهتر در موبایل
-- focus state قابل مشاهده
-- اندازه touch target مناسب
-- پیام empty state بهتر
-- کاهش افکت‌های غیرضروری در موبایل
-
-## منابع رسمی
-
-- WordPress Developer Resources: https://developer.wordpress.org/
-- WordPress Plugin Handbook: https://developer.wordpress.org/plugins/
-- WordPress Theme Handbook: https://developer.wordpress.org/themes/
-- WordPress Hooks: https://developer.wordpress.org/apis/hooks/
-- WordPress Action Reference: https://developer.wordpress.org/apis/hooks/action-reference/
-- WordPress Filter Reference: https://developer.wordpress.org/apis/hooks/filter-reference/
-- Google Search Central: https://developers.google.com/search/docs
-- Google SEO Starter Guide: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
-- web.dev: https://web.dev/
-- MDN Web Docs: https://developer.mozilla.org/
-
-## اجرای محلی
-
-از آنجا که پروژه کاملاً استاتیک است، کافی است repository را clone کرده و `index.html` را در یک وب‌سرور ساده اجرا کنید.
+## توسعه محلی
 
 ```bash
 git clone https://github.com/mraliarman/website-help.git
@@ -156,28 +124,22 @@ cd website-help
 python -m http.server 8000
 ```
 
-سپس آدرس زیر را باز کنید:
+سپس `http://localhost:8000` را باز کنید.
 
-```text
-http://localhost:8000
+برای بررسی Syntax فایل‌های JavaScript:
+
+```bash
+npm run check
 ```
-
-## انتشار
-
-repository برای میزبانی استاتیک مناسب است و می‌تواند روی GitHub Pages، Cloudflare Pages، Netlify، Vercel یا هر وب‌سرور معمولی قرار گیرد.
 
 ## مشارکت
 
-برای افزودن استاندارد جدید، ابتدا مرجع رسمی را بررسی کنید، سپس یک عنوان دقیق، توضیح فارسی کاربردی، دسته‌بندی و لینک معتبر اضافه کنید. از ایجاد اصطلاحات تکراری یا لینک‌های جستجوی عمومی به‌جای مستندات رسمی خودداری کنید.
+برای افزودن دانش جدید، ابتدا منبع رسمی را بررسی کنید، اصطلاح را در دسته مناسب قرار دهید و از تعریف‌های تکراری یا لینک‌های غیررسمی به‌عنوان مرجع اصلی استفاده نکنید.
 
-## مجوز
+## امنیت و مجوز
 
-این پروژه تحت مجوز MIT منتشر شده است. متن کامل مجوز در فایل [LICENSE](LICENSE) قرار دارد.
+گزارش آسیب‌پذیری طبق [SECURITY.md](SECURITY.md) انجام می‌شود. پروژه تحت مجوز MIT منتشر شده است.
 
-## امنیت
+## وضعیت
 
-برای گزارش آسیب‌پذیری یا مشکل امنیتی، دستورالعمل [SECURITY.md](SECURITY.md) را مطالعه کنید.
-
-## وضعیت پروژه
-
-این پروژه یک مرجع زنده است و محتوای آن باید با تغییر APIها، استانداردهای SEO، Core Web Vitals و نسخه‌های جدید WordPress به‌صورت دوره‌ای بازبینی شود.
+این پروژه یک دانشنامه زنده است و با تغییر APIهای WordPress، استانداردهای وب، W3Schools، SEO و Core Web Vitals باید به‌صورت دوره‌ای بازبینی و به‌روزرسانی شود.
