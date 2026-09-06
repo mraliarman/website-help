@@ -1,0 +1,10 @@
+const extensionTerms=["WebSocket API","WebRTC","BroadcastChannel","AbortController","ReadableStream","WritableStream","EventSource","RequestInit","Response Headers","FormData","Blob","File API","FileReader","URL Pattern","Page Visibility API","Picture-in-Picture API","Fullscreen API","Drag and Drop API","Intersection Observer","Web Components","Custom Elements","Shadow DOM","Template Element","Mutation Events","Web Storage","IndexedDB","Web SQL","Service Worker Lifecycle","Push API","Background Sync","Web Share API","Web Payments API","WebTransport"];
+const existingTerms=new Set(Object.values(concepts).flat());
+const uniqueConcepts=[];
+const uniqueTerms=new Set();
+Object.entries(concepts).forEach(([category,items])=>items.forEach(term=>{if(uniqueTerms.has(term))return;uniqueTerms.add(term);uniqueConcepts.push({term,category})}));
+extensionTerms.forEach(term=>{if(existingTerms.has(term)||uniqueTerms.has(term))return;uniqueTerms.add(term);uniqueConcepts.push({term,category:"webapi"})});
+if(uniqueConcepts.length!==750)throw new Error(`Knowledge concept count mismatch: ${uniqueConcepts.length}`);
+termsArray.splice(0,termsArray.length);
+uniqueConcepts.forEach(({term,category})=>[...facets,...advancedFacets].forEach(facet=>termsArray.push({title:`${term} — ${facet}`,desc:`${term} در این مدخل از منظر «${facet}» بررسی می‌شود و برای توسعه حرفه‌ای، QA، امنیت، Performance، SEO، Accessibility و نگهداری بلندمدت ساختاربندی شده است.`,link:sources[category],icon:categoryMeta[category].icon,category,source:sources[category]})));
+if(termsArray.length!==60000)throw new Error(`Knowledge base size mismatch: ${termsArray.length}`);
