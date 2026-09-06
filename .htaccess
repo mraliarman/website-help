@@ -18,11 +18,11 @@ Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), 
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://www.armanhub.ir; font-src 'self' https://www.armanhub.ir; img-src 'self' data:; connect-src 'self'; frame-src 'none'; upgrade-insecure-requests"
 </IfModule>
-<IfModule mod_deflate.c>
-AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
-</IfModule>
 <IfModule mod_brotli.c>
 AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
 </IfModule>
 <IfModule mod_expires.c>
 ExpiresActive On
@@ -38,10 +38,10 @@ ExpiresDefault "access plus 7 days"
 </IfModule>
 <IfModule mod_headers.c>
 <FilesMatch "\.(css|js|mjs|svg|ico|woff2)$">
-Header append Cache-Control "public, max-age=2592000, immutable"
+Header set Cache-Control "public, max-age=2592000, immutable"
 </FilesMatch>
 <FilesMatch "\.html$">
-Header append Cache-Control "public, max-age=0, must-revalidate"
+Header set Cache-Control "public, max-age=0, must-revalidate"
 </FilesMatch>
 </IfModule>
 <FilesMatch "(^|/)\.(?!well-known/)" >
